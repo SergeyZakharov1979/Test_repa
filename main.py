@@ -1,18 +1,13 @@
-n = int(input())
-summ, cnt, mult, num = 0, 0, 1, n
+n, flag = int(input()), 'YES'
+last_num = n % 10
 
 while n > 0:
-    last_num = n % 10
+    curent_num = n % 10
 
-    summ += last_num
-    cnt += 1
-    mult *= last_num 
+    if curent_num != last_num:
+        flag = 'NO' 
+        break
+    else:
+        n //= 10
 
-    n //= 10
-
-f_num = num // (10**(cnt - 1))
-l_num = num % 10
-summ_fl = f_num + l_num
-aver = summ / cnt
-
-print(summ, cnt, mult, aver, f_num, summ_fl, sep='\n')
+print(flag)
