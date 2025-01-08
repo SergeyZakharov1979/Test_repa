@@ -1,15 +1,18 @@
 n = int(input())
-maximum = 0
-minimum = 10**30
+summ, cnt, mult, num = 0, 0, 1, n
 
 while n > 0:
     last_num = n % 10
 
-    if last_num > maximum:
-        maximum = last_num
-    if last_num < minimum:
-        minimum = last_num
+    summ += last_num
+    cnt += 1
+    mult *= last_num 
 
     n //= 10
 
-print(f'Максимальная цифра равна {maximum}', f'Минимальная цифра равна {minimum}', sep='\n')
+f_num = num // (10**(cnt - 1))
+l_num = num % 10
+summ_fl = f_num + l_num
+aver = summ / cnt
+
+print(summ, cnt, mult, aver, f_num, summ_fl, sep='\n')
