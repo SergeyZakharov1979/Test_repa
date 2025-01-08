@@ -2,5 +2,5 @@ n = int(input())
 
 while n > 0:
     last_num = n % 10
-    print(last_num)
+    print(last_num, end='')
     n //= 10
