@@ -1,13 +1,9 @@
-n, flag = int(input()), 'YES'
-last_num = n % 10
+n = int(input())
+div = 2
 
-while n > 0:
-    curent_num = n % 10
-
-    if curent_num != last_num:
-        flag = 'NO' 
+while n > div:
+    if n % div == 0:
         break
-    else:
-        n //= 10
+    div += 1
 
-print(flag)
+print(div)
