@@ -1,6 +1,7 @@
 n = int(input())
 
-for _ in range(n):
-    for _ in range(3):
-        print(n, end=' ')
-    print()
+for i in range(1, n // 2 + 2):
+    print('*' * i)
+
+for j in range(n // 2, 0, - 1):
+    print('*' * j)
