@@ -1,16 +1,12 @@
 n = int(input())
 
-# for i in range(1, n // 2 + 2):
-#     print('*' * i)
+for i in range(n):
+    cnt = 0
+    for j in range(i + 1):
+        cnt +=1
+        print(cnt, end='')
 
-# for j in range(n // 2, 0, - 1):
-#     print('*' * j)
-
-
-cnt = n // 2
-
-for _ in range(n):
-    for _ in range(n // 2 - abs(cnt)):
-        print('*', end='')
+    for k in range(i, 0, - 1):
+        cnt -= 1
+        print(cnt, end='')
     print()
-    cnt -= 1
