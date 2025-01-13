@@ -1,13 +1,12 @@
-n = int(input())
-dig_root = n
+s, cnt_vowels, cnt_consonants = input(), 0, 0
+volwels, consonants = 'ауоыиэяюе', 'бвгджзйклмнпрстфхцчшщ'
 
-while dig_root > 9:
-    n = dig_root 
-    dig_root = 0
+for c in s:
+    if c.lower() in volwels:
+        cnt_vowels += 1
+    if c.lower() in consonants:
+        cnt_consonants += 1
+    
+print(f'Количество гласных букв равно {cnt_vowels}')
+print(f'Количество согласных букв равно {cnt_consonants}')
 
-    while n > 0:
-        last_dig = n % 10
-        dig_root += last_dig
-        n //= 10
-        
-print(dig_root)
