@@ -1,12 +1,15 @@
-cur_day, cur_weight = int(input()), float(input())
+while True:
+    hardest_word, summ_hard = '', 0
 
-control_weight = 100 - 0.2 * cur_day
+    for _ in range(4):
+        wrd = input()
+        cur_summ = 0
+        for c in wrd:
+            cur_summ += ord(c)
 
-if cur_weight > control_weight:
-    mess = 'Что-то пошло не так'
-else:
-    mess = 'Все идет по плану'
+        if cur_summ > summ_hard:
+            summ_hard = cur_summ
+            hardest_word = wrd
 
-print(f'''{mess}
-#{cur_day} ДЕНЬ: ТЕКУЩИЙ ВЕС = {cur_weight} кг, ЦЕЛЬ по ВЕСУ = {control_weight} кг
-''')
+    print(hardest_word)
+    print()
