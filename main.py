@@ -1,21 +1,12 @@
-n = input()
-letters = 'АВЕКМНОРСТУХ'
+cur_day, cur_weight = int(input()), float(input())
 
-seria = n[0] + n[4:6]
-number = n[1:4]
-region = n[7:9]
-new_region = n[7:10]
+control_weight = 100 - 0.2 * cur_day
 
-for c in seria:
-    if c not in letters:
-        print('NO')
-        break
+if cur_weight > control_weight:
+    mess = 'Что-то пошло не так'
 else:
-    if len(n) == 9 and number.isdigit() and region.isdigit() and n[6] == '_':
-        flag = 'YES'
-    elif len(n) == 10 and number.isdigit() and new_region.isdigit() and n[6] == '_':
-        flag = 'YES'
-    else:
-        flag = 'NO'
+    mess = 'Все идет по плану'
 
-    print(flag)
+print(f'''{mess}
+#{cur_day} ДЕНЬ: ТЕКУЩИЙ ВЕС = {cur_weight} кг, ЦЕЛЬ по ВЕСУ = {control_weight} кг
+''')
