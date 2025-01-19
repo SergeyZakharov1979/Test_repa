@@ -1,15 +1,14 @@
-while True:
-    hardest_word, summ_hard = '', 0
+s = input()
+en_let = 'eyopaxcETOPAHXCBM'
+ru_let = 'еуорахсЕТОРАНХСВМ'
 
-    for _ in range(4):
-        wrd = input()
-        cur_summ = 0
-        for c in wrd:
-            cur_summ += ord(c)
+old_cost, new_cost = 0, 0
 
-        if cur_summ > summ_hard:
-            summ_hard = cur_summ
-            hardest_word = wrd
+for c in s:
+    old_cost += ord(c) * 3
+    if c in en_let:
+        new_cost += ord(ru_let[en_let.find(c)]) * 3
+    else:
+        new_cost += ord(c) * 3
 
-    print(hardest_word)
-    print()
+print(f'Старая стоимость: {old_cost}🐝', f'Новая стоимость: {new_cost}🐝', sep='\n')
