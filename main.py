@@ -1,13 +1,12 @@
-while True:
-    str1, str2 = input().lower(), input().lower()
-    cnt1, cnt2 = 0, 0
+w = input()
+small = w
+large = w
 
-    for c in str1:
-        if c.isalpha():
-            cnt1 += ord(c)
+for _ in range(2):
+    w = input()
+    if w < small:
+        small, w = w, small
+    if w > large:
+        large, w = w, large
 
-    for c in str2:
-        if c.isalpha():
-            cnt2 += ord(c)
-
-    print('YES' if cnt1 == cnt2 else 'NO')
+print(small, w, large)
