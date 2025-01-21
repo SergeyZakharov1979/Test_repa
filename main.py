@@ -1,10 +1,13 @@
 while True:
-    n = int(input())
+    str1, str2 = input().lower(), input().lower()
+    cnt1, cnt2 = 0, 0
 
-    for _ in range(n):
-        cls = input()
-        if len(cls) == 2:
-            print('YES' if 48 <= ord(cls[0]) <= 57 and 1040 <= ord(
-                cls[1]) <= 1055 else 'NO')
-        else:
-            print('NO')
+    for c in str1:
+        if c.isalpha():
+            cnt1 += ord(c)
+
+    for c in str2:
+        if c.isalpha():
+            cnt2 += ord(c)
+
+    print('YES' if cnt1 == cnt2 else 'NO')
