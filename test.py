@@ -1,5 +1,4 @@
-n = int(input())
-
-for i in range(1, n + 1):
-    print('*' * i)
-print()
+abc = '0123456789АБВГДЕЖЗИЙКЛМНОП'
+for c in abc:
+    print(f'{c} = {ord(c)}')
+        
