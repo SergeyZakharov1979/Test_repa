@@ -1,12 +1,20 @@
 n = int(input())
-seq_x, seq_F = [], []
+seq = []
 
-for i in range(n):
-    x = int(input())
-    seq_x.append(x)
-    F = pow(x, 2) + 2*x + 1
-    seq_F.append(F)
+for _ in range(n):
+    seq.append(input())
 
-print(*seq_x, sep='\n')
-print()
-print(*seq_F, sep='\n')
+k = int(input())
+reqs = []
+
+for _ in range(k):
+    reqs.append(input())
+
+
+for s in seq:
+    cnt = 0
+    for i in range(len(reqs)):
+        if reqs[i].lower() in s.lower():
+            cnt += 1
+    if cnt == k:
+        print(s)
