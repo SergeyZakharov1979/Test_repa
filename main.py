@@ -1,6 +1,12 @@
-lst = []
-for i in range(26):
-    j = i + 1
-    lst.append(chr(ord('a') + i) * j)
+n = int(input())
+seq_x, seq_F = [], []
 
-print(lst)
+for i in range(n):
+    x = int(input())
+    seq_x.append(x)
+    F = pow(x, 2) + 2*x + 1
+    seq_F.append(F)
+
+print(*seq_x, sep='\n')
+print()
+print(*seq_F, sep='\n')
