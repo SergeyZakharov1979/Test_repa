@@ -1,10 +1,6 @@
-n = input()
-string, line_code = [], []
+keywords = ['False', 'True', 'None', 'and', 'with', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally',
+            'try', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'while', 'yield']
 
-for st in range(int(n[1:])):
-    string = input().split('#')
-    line_code.append(string[0].rstrip())
-    string.clear()
+new_keywords = [l[1:] for l in keywords]
 
-print(*line_code, sep='\n')
-
+print(new_keywords)
