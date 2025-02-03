@@ -1,12 +1,13 @@
-s, cnt_vowels, cnt_consonants = input(), 0, 0
-volwels, consonants = 'ауоыиэяюе', 'бвгджзйклмнпрстфхцчшщ'
+a = [7, 3, 9, 2, 1, 0]
+n = len(a)
 
-for c in s:
-    if c.lower() in volwels:
-        cnt_vowels += 1
-    if c.lower() in consonants:
-        cnt_consonants += 1
-    
-print(f'Количество гласных букв равно {cnt_vowels}')
-print(f'Количество согласных букв равно {cnt_consonants}')
+for i in range(n - 1):
+    #  a[:(n - i)]
+    mx = max(a[:(n - i)])
+    ind_mx = a[:(n - i)].index(mx)
+    ind_cur = n -1 - i
 
+    a[ind_mx], a[ind_cur] = a[ind_cur], a[ind_mx]
+
+
+print(a)
