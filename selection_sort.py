@@ -11,7 +11,8 @@ def merge(list1, list2):
         sm_lst[ind_cur], sm_lst[ind_mx] = sm_lst[ind_mx], sm_lst[ind_cur]
 
     return sm_lst
-    
+
+
 # считываем данные
 numbers1 = [int(c) for c in input().split()]
 numbers2 = [int(c) for c in input().split()]
