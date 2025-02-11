@@ -1,20 +1,10 @@
-# объявление функции
-def merge(list1, list2):
-    sm_lst = list1 + list2
-    n = len(sm_lst)
-
-    for i in range(n - 1):
-        mx = max(sm_lst[:n - i])
-        ind_mx = sm_lst[:n - i].index(mx)
-        ind_cur = n - 1 - i
-
-        sm_lst[ind_cur], sm_lst[ind_mx] = sm_lst[ind_mx], sm_lst[ind_cur]
-
-    return sm_lst
+def is_valid_triangle(s1, s2, s3):
+    if s1 + s2 > s3 and s1 + s3 > s2 and s2 + s3 > s1:
+        return True
+    else:
+        return False
     
-# считываем данные
-numbers1 = [int(c) for c in input().split()]
-numbers2 = [int(c) for c in input().split()]
 
-# вызываем функцию
-print(merge(numbers1, numbers2))
+print(is_valid_triangle(2, 2, 2))
+print(is_valid_triangle(2, 3, 10))
+print(is_valid_triangle(3, 4, 5))
