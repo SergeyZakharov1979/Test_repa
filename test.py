@@ -1,7 +1,10 @@
-if False:
+num = int(input())
+
+count = 0
+for div in range(2, num + 1):
+    if num % div == 0:
+        count += 1
+if count == 1:
+    print(True)
+else:
     print(False)
-if bool(0):
-    print("bool(0)")
-if 0:
-    print(0)
-print('Конец')
