@@ -1,10 +1,4 @@
-num = int(input())
+lst = age, name, status = (24, 'Alise', True)
 
-count = 0
-for div in range(2, num + 1):
-    if num % div == 0:
-        count += 1
-if count == 1:
-    print(True)
-else:
-    print(False)
+for var in lst:
+    print(type(var))
