@@ -1,0 +1,6 @@
+#!/bin/bash
+# our comment is here
+echo "The currently directory is:"
+pwd
+echo "The user logged in is:"
+whoami
