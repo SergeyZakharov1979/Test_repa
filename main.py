@@ -1,4 +1,6 @@
-s = 0
-while (el := int(input())) != 0:
-    s += el
-print(s)
+while True:
+    if 4 < len(s := input()) < 10:
+        psw = s
+    else:
+        break
+print(psw)
