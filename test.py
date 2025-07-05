@@ -1,22 +1,10 @@
-# def test_number(matrix: list):
-#     N = len(matrix)
-#     sample_list = list(range(1, N**2))
-#     test_list = []
+s = "[2025-07-03 14:20:01] INFO: User 'alex' logged in"
+# stop_list = '0123456789-:[]'
+# status_and_mess = ''.join([symb for symb in s if symb not in stop_list])
+# status, *message = status_and_mess.split()
+# message = ' '.join(message)
 
-#     for i in range(N):
-#         for j in range(N):
-#             test_list.append(matrix[i][j])
+# print(status, message)
 
-#     return sample_list == sorted(test_list)
-
-# m = [
-#     [8, 1, 6],
-#     [3, 5, 7],
-#     [4, 9, 2]
-# ]
-
-# print(test_number(m))
-
-N = int(input())
-sample_list = list(range(1, N**2 + 1))
-print(sample_list)
+status, message = s[s.find(']') + 1:].split(':')
+print(status, message, sep='\n')
